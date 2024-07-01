@@ -12,7 +12,7 @@ class Post(Base):
     title: Mapped[str] = mapped_column(String(length=356))
     description: Mapped[str] = mapped_column(Text())
     user_id: Mapped[int] = mapped_column(
-        ForeignKey('users.id'), ondelete='CASCADE', onupdate='CASCADE'
+        ForeignKey('users.id', ondelete='CASCADE'),
     )
     owner: Mapped[User] = relationship(
         back_populates="posts", uselist=True, cascade="all, delete, delete-orphan"

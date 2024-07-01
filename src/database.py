@@ -7,6 +7,6 @@ class Base(DeclarativeBase):
     id: Mapped[int] = mapped_column(primary_key=True)
 
 
-async_url: str = "sqlite+aiosqlite:///test.db"
+async_url: str = "sqlite+aiosqlite:///test.sqlite3"
 engine = create_async_engine(async_url)
 async_session_maker = async_sessionmaker(bind=engine)
