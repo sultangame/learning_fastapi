@@ -1,6 +1,10 @@
+from __future__ import annotations
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, Text, ForeignKey
+from typing import TYPE_CHECKING
 from src.database import Base
+if TYPE_CHECKING:
+    from src.users import User
 
 
 class Post(Base):
@@ -10,6 +14,6 @@ class Post(Base):
     user_id: Mapped[int] = mapped_column(
         ForeignKey('users.id'), ondelete='CASCADE', onupdate='CASCADE'
     )
-    owner: Mapped[str] = relationship(
+    owner: Mapped[User] = relationship(
         back_populates="posts", uselist=True, cascade="all, delete, delete-orphan"
     )

@@ -1,6 +1,10 @@
-from sqlalchemy.orm import Mapped, mapped_column
+from __future__ import annotations
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+from typing import List, TYPE_CHECKING
 from sqlalchemy import String, Boolean
 from src.database import Base
+if TYPE_CHECKING:
+    from src.posts import Post
 
 
 class User(Base):
@@ -13,3 +17,6 @@ class User(Base):
     is_superuser: Mapped[bool] = mapped_column(Boolean, default=False)
     is_staff: Mapped[bool] = mapped_column(Boolean, default=False)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
+    posts: Mapped[List[Post]] = relationship(
+        back_populates="owner", uselist=False, cascade="all, delete-orphan"
+    )
