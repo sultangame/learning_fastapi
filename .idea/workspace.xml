@@ -4,16 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b970f4a-c740-4d7c-8df2-2126e365bdcf" name="Changes" comment="add relationships">
-      <change afterPath="$PROJECT_DIR$/alembic.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/script.py.mako" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/versions/2024_07_01_1237-ba62f54c6a58_users_and_posts_tables.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.sqlite3" afterDir="false" />
+    <list default="true" id="0b970f4a-c740-4d7c-8df2-2126e365bdcf" name="Changes" comment="add repository and service for crud">
+      <change afterPath="$PROJECT_DIR$/src/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/crud/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/crud/depends.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/crud/repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/crud/service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/schemas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/crud/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/crud/depends.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/crud/repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/crud/service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/schemas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/utils/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/utils/hash_password.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/users/utils/jwt_token.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/posts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/posts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/test.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +89,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -114,7 +133,9 @@
       <workItem from="1719818061202" duration="164000" />
       <workItem from="1719818244246" duration="1413000" />
       <workItem from="1719819682277" duration="152000" />
-      <workItem from="1719819839390" duration="78000" />
+      <workItem from="1719819839390" duration="2911000" />
+      <workItem from="1719845202035" duration="2835000" />
+      <workItem from="1719851543993" duration="512000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -132,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719819259650</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="migrate to sqlite3">
+      <option name="closed" value="true" />
+      <created>1719819979487</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719819979488</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +171,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="add relationships" />
-    <option name="LAST_COMMIT_MESSAGE" value="add relationships" />
+    <MESSAGE value="migrate to sqlite3" />
+    <option name="LAST_COMMIT_MESSAGE" value="migrate to sqlite3" />
   </component>
 </project>

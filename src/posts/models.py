@@ -15,5 +15,5 @@ class Post(Base):
         ForeignKey('users.id', ondelete='CASCADE'),
     )
     owner: Mapped[User] = relationship(
-        back_populates="posts", uselist=True, cascade="all, delete, delete-orphan"
+        back_populates="posts", uselist=True
     )

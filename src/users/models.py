@@ -18,5 +18,5 @@ class User(Base):
     is_staff: Mapped[bool] = mapped_column(Boolean, default=False)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     posts: Mapped[List[Post]] = relationship(
-        back_populates="owner", uselist=False, cascade="all, delete-orphan"
+        back_populates="owner", uselist=True
     )
