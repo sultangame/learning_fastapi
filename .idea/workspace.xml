@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b970f4a-c740-4d7c-8df2-2126e365bdcf" name="Changes" comment="add something new">
-      <change afterPath="$PROJECT_DIR$/src/users/test.py" afterDir="false" />
+    <list default="true" id="0b970f4a-c740-4d7c-8df2-2126e365bdcf" name="Changes" comment="add something new 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/schemas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/utils/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/utils/auth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +130,7 @@
       <workItem from="1719914089387" duration="3870000" />
       <workItem from="1719919695048" duration="679000" />
       <workItem from="1719920394024" duration="1174000" />
-      <workItem from="1719935518964" duration="2031000" />
+      <workItem from="1719935518964" duration="2644000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -183,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719921523417</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add something new 2">
+      <option name="closed" value="true" />
+      <created>1719937632931</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719937632931</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +213,8 @@
     <MESSAGE value="add crud for api" />
     <MESSAGE value="error in get current user" />
     <MESSAGE value="add something new" />
-    <option name="LAST_COMMIT_MESSAGE" value="add something new" />
+    <MESSAGE value="add something new 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="add something new 2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/new_fastapi_app$config.coverage" NAME="config Coverage Results" MODIFIED="1719853853371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

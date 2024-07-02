@@ -65,3 +65,8 @@ async def find_current_user(jwt_token: Annotated[str | bytes, Depends(auth.token
     answer = await auth.get_current_user(jwt_token=jwt_token)
 
     return answer
+
+
+@user_router.get("/test")
+async def test(jwt_token: Annotated[str | bytes, Depends(auth.token)]):
+    return jwt_token

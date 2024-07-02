@@ -1,5 +1,7 @@
 from fastapi import HTTPException, status, Depends
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
+from jwt import InvalidTokenError
+
 from src.users import schemas, User
 from .hash_password import hash_password, check_password
 from sqlalchemy import select
@@ -58,7 +60,18 @@ async def login_users(data: OAuth2PasswordRequestForm = Depends()):
 async def get_current_user(
         jwt_token: Annotated[str | bytes, Depends(token)],
 ):
-    answer: dict = decode_jwt(jwt_token)
-    token_data = schemas.TokenData(username=answer.get("sub"))
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    try:
+        payload = decode_jwt(token=jwt_token)
+        username: str = payload.get("sub")
+        if username is None:
+            raise credentials_exception
+        token_data = schemas.TokenData(username=username)
+    except InvalidTokenError:
+        raise credentials_exception
     user: User = await find_one_user(username=token_data.username)
     return user
