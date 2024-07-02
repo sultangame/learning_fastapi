@@ -61,7 +61,7 @@ async def login_one_user(response: Response, data: OAuth2PasswordRequestForm = D
 
 
 @user_router.get("/get/current/user/", response_model=schemas.UserRead)
-async def find_current_user(jwt_token: str = Depends(auth.token)):
+async def find_current_user(jwt_token: Annotated[str | bytes, Depends(auth.token)]):
     answer = await auth.get_current_user(jwt_token=jwt_token)
 
     return answer

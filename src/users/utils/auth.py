@@ -46,21 +46,19 @@ async def login_users(data: OAuth2PasswordRequestForm = Depends()):
         raise exception
     if not check_password(data.password, user.hashed_password):
         raise exception
-    payload = {"sub": data.username, "email": user.email}
+    payload = {
+        "sub": data.username,
+        "email": user.email
+    }
     access_token = encode_jwt(payload=payload)
     print(access_token)
     return access_token
 
 
-async def get_current_user(jwt_token: str = Depends(token)):
-    credentials_exception = HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
-                                          detail="Could not Validate Credentials",
-                                          headers={"WWW-Authenticate": "Bearer"})
-
-    answer = decode_jwt(jwt_token)
-    username: str = answer.get("username")
-    if username is None:
-        raise credentials_exception
-    user = await find_one_user(username=username)
-    print(jwt_token)
+async def get_current_user(
+        jwt_token: Annotated[str | bytes, Depends(token)],
+):
+    answer: dict = decode_jwt(jwt_token)
+    token_data = schemas.TokenData(username=answer.get("sub"))
+    user: User = await find_one_user(username=token_data.username)
     return user

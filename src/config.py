@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     HOST: str = "0.0.0.0"
     PORT: int = 8000
-    DEBUG: bool = False
+    DEBUG: bool = True
     RELOAD: bool = False
     auth: AuthJWT = AuthJWT()
 

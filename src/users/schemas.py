@@ -28,3 +28,6 @@ class UserRead(UserBase):
     class Config:
         from_attributes = True
 
+
+class TokenData(BaseModel):
+    username: Optional[str] = None
