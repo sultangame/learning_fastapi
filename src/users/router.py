@@ -60,7 +60,7 @@ async def login_one_user(response: Response, data: OAuth2PasswordRequestForm = D
     response.set_cookie(key="bearer_token", value=token, httponly=True)
 
 
-@user_router.get("/get/current/user/")
+@user_router.get("/get/current/user/", response_model=schemas.UserRead)
 async def find_current_user(jwt_token: str = Depends(auth.token)):
     answer = await auth.get_current_user(jwt_token=jwt_token)
 
