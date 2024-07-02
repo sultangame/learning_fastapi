@@ -1,4 +1,3 @@
-from __future__ import annotations
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from typing import List, TYPE_CHECKING
 from sqlalchemy import String, Boolean
@@ -17,6 +16,6 @@ class User(Base):
     is_superuser: Mapped[bool] = mapped_column(Boolean, default=False)
     is_staff: Mapped[bool] = mapped_column(Boolean, default=False)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
-    posts: Mapped[List[Post]] = relationship(
+    posts: Mapped[List["Post"]] = relationship(
         back_populates="owner", uselist=True
     )

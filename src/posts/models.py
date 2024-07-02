@@ -1,4 +1,3 @@
-from __future__ import annotations
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, Text, ForeignKey
 from typing import TYPE_CHECKING
@@ -14,6 +13,6 @@ class Post(Base):
     user_id: Mapped[int] = mapped_column(
         ForeignKey('users.id', ondelete='CASCADE'),
     )
-    owner: Mapped[User] = relationship(
+    owner: Mapped["User"] = relationship(
         back_populates="posts", uselist=True
     )

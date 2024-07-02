@@ -1,10 +1,11 @@
 from fastapi.middleware.cors import CORSMiddleware
+from src.config import settings
 from fastapi import FastAPI
 from src.api import api_v1
 import uvicorn
 
 
-app = FastAPI()
+app = FastAPI(debug=settings.DEBUG)
 app.include_router(api_v1)
 origins = [
     "http://localhost.tiangolo.com",
@@ -28,4 +29,9 @@ app.add_middleware(
 )
 
 if __name__ == '__main__':
-    uvicorn.run("main:app", reload=True)
+    uvicorn.run(
+        app="main:app",
+        reload=settings.RELOAD,
+        host=settings.HOST,
+        port=settings.PORT,
+    )

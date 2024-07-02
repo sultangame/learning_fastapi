@@ -4,34 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b970f4a-c740-4d7c-8df2-2126e365bdcf" name="Changes" comment="add repository and service for crud">
-      <change afterPath="$PROJECT_DIR$/src/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/posts/crud/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/posts/crud/depends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/posts/crud/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/posts/crud/service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/posts/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/posts/schemas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/crud/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/crud/depends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/crud/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/crud/service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/schemas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/utils/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/utils/hash_password.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/users/utils/jwt_token.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/service.py" afterDir="false" />
+    <list default="true" id="0b970f4a-c740-4d7c-8df2-2126e365bdcf" name="Changes" comment="tyr to add auth system">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/certificates/jwt-private.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/certificates/jwt-public.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirments.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/new_fastapi_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/new_fastapi_app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/posts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/2024_07_01_1237-ba62f54c6a58_users_and_posts_tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/2024_07_01_2222-d37f2ac7345a_users_and_posts_tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/posts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/users/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/test.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/router.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/utils/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/utils/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/users/utils/jwt_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/users/utils/jwt_token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.sqlite3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +65,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;FastAPI.new_fastapi_app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -89,8 +87,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -135,7 +133,9 @@
       <workItem from="1719819682277" duration="152000" />
       <workItem from="1719819839390" duration="2911000" />
       <workItem from="1719845202035" duration="2835000" />
-      <workItem from="1719851543993" duration="512000" />
+      <workItem from="1719851543993" duration="3294000" />
+      <workItem from="1719914089387" duration="3870000" />
+      <workItem from="1719919695048" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -161,17 +161,41 @@
       <option name="project" value="LOCAL" />
       <updated>1719819979488</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add crud for api">
+      <option name="closed" value="true" />
+      <created>1719852536915</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719852536915</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="add relationships" />
     <MESSAGE value="migrate to sqlite3" />
-    <option name="LAST_COMMIT_MESSAGE" value="migrate to sqlite3" />
+    <MESSAGE value="add crud for api" />
+    <option name="LAST_COMMIT_MESSAGE" value="add crud for api" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/new_fastapi_app$config.coverage" NAME="config Coverage Results" MODIFIED="1719853853371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/new_fastapi_app$new_fastapi_app.coverage" NAME="new_fastapi_app Coverage Results" MODIFIED="1719853837432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

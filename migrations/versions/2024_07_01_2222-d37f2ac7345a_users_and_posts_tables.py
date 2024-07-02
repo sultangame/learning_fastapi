@@ -1,8 +1,8 @@
 """users and posts tables
 
-Revision ID: ba62f54c6a58
+Revision ID: d37f2ac7345a
 Revises: 
-Create Date: 2024-07-01 12:37:51.911455
+Create Date: 2024-07-01 22:22:42.485381
 
 """
 
@@ -13,7 +13,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = "ba62f54c6a58"
+revision: str = "d37f2ac7345a"
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
